@@ -8,7 +8,7 @@
 // are safe to publish; access is controlled by sign-in + the rules in
 // firestore.rules.
 // ------------------------------------------------------------------
- const firebaseConfig = {
+ window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyASfqBFrWiMaK_Sw21RimY7nbktEicE29U",
   authDomain: "dti-students.firebaseapp.com",
   projectId: "dti-students",
