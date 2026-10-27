@@ -1,0 +1,26 @@
+// Paste this into Firebase console -> Firestore Database -> Rules -> Publish.
+//
+// Only the people listed below can read or change any data, and only after
+// signing in. EDIT THE EMAILS in the Firebase console, not in your GitHub
+// repo (this file is public if your repo is public) - keep the example
+// addresses here.
+//
+// Use lowercase emails, exactly as you created the accounts.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isStaff() {
+      return request.auth != null
+        && request.auth.token.email in [
+          'principal@example.com',
+          'records@example.com'
+        ];
+    }
+
+    match /{collection}/{docId} {
+      allow read, write: if isStaff();
+    }
+  }
+}
