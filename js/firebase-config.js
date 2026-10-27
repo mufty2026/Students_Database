@@ -8,11 +8,11 @@
 // are safe to publish; access is controlled by sign-in + the rules in
 // firestore.rules.
 // ------------------------------------------------------------------
-window.FIREBASE_CONFIG = {
-  apiKey: "PASTE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+const firebaseConfig = {
+  apiKey: "AIzaSyASfqBFrWiMaK_Sw21RimY7nbktEicE29U",
+  authDomain: "dti-students.firebaseapp.com",
+  projectId: "dti-students",
+  storageBucket: "dti-students.firebasestorage.app",
+  messagingSenderId: "792399601228",
+  appId: "1:792399601228:web:9c352f761e7f5240c6dee9"
 };
